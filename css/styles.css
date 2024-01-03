@@ -1,16 +1,40 @@
 .body {
   font-family: "Montserrat", sans-serif;
+  background-color: #FAFAFA;
+}
+p,h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 a {
   text-decoration: none;
+  color: currentColor;
 }
 ul {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 .link {
   text-decoration: none;
 }
-
+button{ 
+  cursor: pointer;
+}
+address{
+  font-style: normal;
+}
+img{
+  display: block;
+}
+.conteiner{width: 100%;
+  max-width: 1166px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -23,16 +47,38 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+.header{
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+.header-conteiner{
+  display: flex;
+  gap: 90px;
+  align-items: center;
+}
+.header-navigation{
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
 .header-logo {
   color: #111;
   font-size: 18px;
-  font-style: italic;
   font-weight: 700;
   line-height: 1.11px;
   letter-spacing: -0.54px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
-
+.header-logo-italic{
+  font-style: italic;
+}
+.header-menu-list{
+  display: flex;
+  gap: 24px;
+}
 .header-menu-link {
   color: #111;
   font-size: 14px;
@@ -40,7 +86,10 @@ ul {
   line-height: 1.14px;
   letter-spacing: -0.02px;
 }
-
+.header-soc{
+  display: flex;
+  gap: 14px;
+}
 .header-menu-link:hover,
 .header-menu-link:active,
 .header-menu-link:focus {
@@ -48,49 +97,76 @@ ul {
 }
 
 .hero {
-  background: rgba(17, 17, 17, 0.6);
+  padding-bottom: 80px;
 }
-
-.hero-title {
+.hero-conteiner{
+background-color: rgba(17, 17, 17, 0.6);
+border-radius: 30px;
+padding: 380px 40px 40px 40px;
+}
+.hero-title{
   color: #fff;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  max-width: 484px;
 }
-
+.hero-button{
+  display: flex;
+  align-items: center;
+}
 .hero-byu-btn {
+  padding: 14px 40px;
   color: #fff;
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
   line-height: normal;
+  border-radius: 100px;
+  background: #FD9222;
+  border: none;
+  cursor: pointer;
+  margin-right: 14px;
 }
 
 .hero-made-btn {
+  padding: 14px 40px;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   line-height: normal;
+  border-radius: 100px;
+  border: 1px solid #FFF;
+  background-color: transparent;
 }
 
 .hero-down-btn {
-  color: #fff;
+   color: #fff;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
-  /letter-spacing: -0.03em;
+  letter-spacing: -0.03em;
+  margin-left: auto;
 }
 
-----------------------Features-------------------------- 
+
 .features {
   background: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .features-list {
+  display: flex;
+  padding-left: 18px;
+  padding-right: 18px;
+  gap: 88px;
 }
 
 .features-item {
+  width: calc(( 100% - 88px * 2) / 3);
 }
 
 .features-subtitle {
@@ -98,6 +174,7 @@ ul {
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
+  margin-bottom: 18px;
 }
 
 .features-item-text {
@@ -107,7 +184,10 @@ ul {
   letter-spacing: -0, 02em;
 }
 
-----------------------taste---------------- .taste {
+----------------------taste---------------- 
+.taste {
+  padding-top: 120px;
+  
 }
 
 .taste-title {
@@ -118,6 +198,8 @@ ul {
   line-height: 1, 16;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  max-width: 412px;
+  margin: 0 auto 28px;
 }
 
 .taste-title-color {
@@ -130,12 +212,22 @@ ul {
   font-size: 14px;
   line-height: 1, 29;
   letter-spacing: -0.02em;
+  margin: 0 auto 50px;
+  max-width: 486px;
 }
 
 .taste-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 32px;
 }
 
 .taste-item {
+border-radius: 15px;
+border: 1px solid #FD9222;
+background: #fff;
+width: calc((100% - 32 * 3) / 4);
+padding: 28px 23px;
 }
 
 .taste-subtitle {
@@ -144,12 +236,17 @@ ul {
   font-weight: 600;
   line-height: 1, 29;
   letter-spacing: -0.02em;
+  padding-left: 5px;
 }
 
 .taste-img {
+  margin: 0 auto;
+  margin-top: 36px;
 }
 
----------------------------maid-------------------------------- .maid {
+---------------------------maid--------------------------------
+ .maid {
+  padding-top: 120px;
 }
 .maid-title {
   color: #111;
@@ -159,18 +256,30 @@ ul {
   line-height: 1, 16;
   letter-spacing: -0, 03em;
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
+.maid-wrape {
+  display: flex;
+  gap: 20px;
+}
+
 .maid-title-color {
   color: #fd9222;
 }
 
 .maid-img {
 }
+.maid-content{
+  background-color: #ffff;
+  padding: 32px;
+}
 .maid-subtitre {
   color: #111;
   font-size: 18px;
   font-weight: 600;
   line-height: 1, 33;
+  margin-bottom: 28px;
+  max-width: 350px;
 }
 .maid-list {
 }
@@ -183,6 +292,7 @@ ul {
   font-size: 14px;
   line-height: 1, 29;
   letter-spacing: -0.02em;
+  margin-bottom: 24px;
 }
 -----------------------------Products----------------------- .products {
 }
