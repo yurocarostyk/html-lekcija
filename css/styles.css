@@ -90,6 +90,8 @@ img{
   display: flex;
   gap: 14px;
 }
+.header-soc-ikon:hover{ fill: #FD9222;}
+
 .header-menu-link:hover,
 .header-menu-link:active,
 .header-menu-link:focus {
@@ -288,9 +290,24 @@ padding: 28px 23px;
 .maid-list {
 }
 
-.maid-item {
+ .maid-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
+.maid-item::before{
+  content:'';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #111;
+  border-radius: 50%;
+  border: 1px solid #eceded;
+  flex-shrink: 0;
+}
+.maid-item + .maid-item{
+  margin-top: 20px;
+}
 .maid-item-text {
   color: #111;
   font-size: 14px;
