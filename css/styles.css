@@ -173,8 +173,19 @@ padding: 380px 40px 40px 40px;
 
 .features-item {
   width: calc(( 100% - 88px * 2) / 3);
+  position: relative;
 }
-
+.features-item:not(:last-child)::after{
+  content: "";
+  width: 1px;
+   height: 124px;
+   right: -44px;
+   top: 0;
+  position: absolute;
+  background-color: #FFF;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .features-subtitle {
   color: #fff;
   font-size: 18px;
