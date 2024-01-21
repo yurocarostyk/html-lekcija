@@ -402,12 +402,68 @@ line-height: 1,33;
 letter-spacing: -0.02ex;
 text-transform: uppercase;
 }
+.footer{
+  background: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-heading{
+  color: #FFF;  
+  font-size: 28px;
+font-weight: 500;
+line-height: calc(34 / 28);
+letter-spacing: -0.02em;
+}
+.footer-subtitre{
+  color: #FFF;
+  text-align: centre;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+}
+.footer-soc-list{}
+.footer-soc-item{}
+.footer-soc-link{}
+.footer-adress{
+  font-style: normal;
+}
+.footer-adress-list{}
+.footer-adress-item{}
+.footer-adress-link{ 
+  color: #FFF;
+  text-align: centre;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+.footer-top{
+  border-bottom: 1px solid rgba(255 255 255 0.10);
+}
+.footer-navigation
+.footer-menu-list
+.footer-menu-item
+.footer-menu-link{
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
 .backdrop {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   background-color: #82619e84;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .modal {
   width: 517px;
@@ -506,3 +562,31 @@ text-transform: uppercase;
   padding: 24px 22px;
   resize: 0;
 } 
+.check-text{
+   color: #111;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+}
+.check-text a{
+  color: #FD9222;
+  text-decoration: underline;
+}
+.check-text span{
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.25);
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+.check-input:checked + .check-text span{
+  background-color: #FD9222;
+  border: 0;
+  fill: #FAFAFA;
+}
